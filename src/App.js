@@ -90,18 +90,19 @@ class App extends Component {
     return (
       <Row >
         <Column50>
-            <Filter image={Img} filter='blur' value={this.state.blur} handler={this.blurHandler}/>
-            <Filter image={Img} filter='brightness' value={this.state.brightness} handler={this.brightnessHandler}/>
-            <Filter image={Img} filter='contrast' value={this.state.contrast} handler={this.contrastHandler}/>
-            <Filter image={Img} filter='grayscale' value={this.state.grayscale} handler={this.grayscaleHandler}/>
-            <Filter image={Img} filter='invert' value={this.state.invert} handler={this.invertHandler}/>
-            <Filter image={Img} filter='opacity' value={this.state.opacity} handler={this.opacityHandler}/>
-            <Filter image={Img} filter='saturate' value={this.state.saturate} handler={this.saturateHandler}/>
-            <Filter image={Img} filter='sepia' value={this.state.sepia} handler={this.sepiaHandler}/>
+            <Filter image={this.state.imageUrl} filter='blur' value={this.state.blur} handler={this.blurHandler}/>
+            <Filter image={this.state.imageUrl} filter='brightness' value={this.state.brightness} handler={this.brightnessHandler}/>
+            <Filter image={this.state.imageUrl} filter='contrast' value={this.state.contrast} handler={this.contrastHandler}/>
+            <Filter image={this.state.imageUrl} filter='grayscale' value={this.state.grayscale} handler={this.grayscaleHandler}/>
+            <Filter image={this.state.imageUrl} filter='invert' value={this.state.invert} handler={this.invertHandler}/>
+            <Filter image={this.state.imageUrl} filter='opacity' value={this.state.opacity} handler={this.opacityHandler}/>
+            <Filter image={this.state.imageUrl} filter='saturate' value={this.state.saturate} handler={this.saturateHandler}/>
+            <Filter image={this.state.imageUrl} filter='sepia' value={this.state.sepia} handler={this.sepiaHandler}/>
         </Column50>
         <Column50 flexDirectionColumn>
           <ImageLoader handler={this.imageHandler}/>
-          <Image 
+          <Image
+            image={this.state.imageUrl}
             blur={this.state.blur}
             brightness={this.state.brightness}
             contrast={this.state.contrast}

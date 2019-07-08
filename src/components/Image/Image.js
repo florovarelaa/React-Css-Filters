@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import './Image.css';
-import Img from '../../images/leopard.jpg'
 
 class Image extends Component {
 
     getStyle = () => {
         return {
-            backgroundImage: `url('${Img}')`,
+            backgroundImage: `url('${this.props.image}')`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             filter: `blur(${this.props.blur}px) 
