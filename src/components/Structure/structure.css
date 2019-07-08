@@ -5,7 +5,12 @@
 .column50 {
   flex: 50%;
   height: 100vh;
-  }
+}
+
+.flexDirectionColumn {
+  display: flex;
+  flex-direction: column;
+}
 
 .wrapper {
 flex-wrap: wrap

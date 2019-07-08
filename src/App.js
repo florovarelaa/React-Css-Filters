@@ -5,6 +5,7 @@ import Image from './components/Image/Image';
 import Img from './images/leopard.jpg';
 import Filter from './components/Filter/Filter';
 import Row from './components/Structure/Row';
+import ImageLoader from './components/ImageLoader/ImageLoader';
 
 class App extends Component {
     constructor(props) {
@@ -18,6 +19,7 @@ class App extends Component {
         opacity: '100',
         saturate: '100',
         sepia: '0',
+        imageUrl: Img,
       };
       this.blurHandler = this.blurHandler.bind(this);
       this.brightnessHandler = this.brightnessHandler.bind(this);
@@ -27,6 +29,7 @@ class App extends Component {
       this.opacityHandler = this.opacityHandler.bind(this);
       this.saturateHandler = this.saturateHandler.bind(this);
       this.sepiaHandler = this.sepiaHandler.bind(this);
+      this.imageHandler = this.imageHandler.bind(this);
     }
   
   blurHandler(value) {
@@ -76,6 +79,12 @@ class App extends Component {
       sepia: value
     })
   }
+
+  imageHandler(url) {
+    this.setState({
+      imageUrl: url,
+    })
+  }
   
   render() {
     return (
@@ -90,7 +99,8 @@ class App extends Component {
             <Filter image={Img} filter='saturate' value={this.state.saturate} handler={this.saturateHandler}/>
             <Filter image={Img} filter='sepia' value={this.state.sepia} handler={this.sepiaHandler}/>
         </Column50>
-        <Column50>
+        <Column50 flexDirectionColumn>
+          <ImageLoader handler={this.imageHandler}/>
           <Image 
             blur={this.state.blur}
             brightness={this.state.brightness}

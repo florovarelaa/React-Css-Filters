@@ -1,0 +1,21 @@
+input[type=text] {
+    width: 80%;
+    height: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+    color: #000000;
+    background-color: #d3d3d3;
+    outline: none;
+}
+
+button {
+    width: 20%;
+    height: 100%;
+    color: #303030;
+    background-color: #e0e0e0;
+    outline: none;
+}
+
+.bottomBlack {
+    border: 3px solid #303030
+}
