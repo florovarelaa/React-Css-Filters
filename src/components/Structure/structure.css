@@ -1,0 +1,12 @@
+.row {
+    display: flex;
+}
+
+.column50 {
+  flex: 50%;
+  height: 100vh;
+  }
+
+.wrapper {
+flex-wrap: wrap
+}
