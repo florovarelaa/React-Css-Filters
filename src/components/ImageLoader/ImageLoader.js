@@ -10,7 +10,9 @@ class ImageLoader extends Component {
     }
 
     loadImage = () => {
-        this.props.handler(this.state.input)
+        if (this.state.input !== '') {
+            this.props.handler(this.state.input)
+        }
     }
 
     handleChange = (event) => {
